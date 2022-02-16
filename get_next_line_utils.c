@@ -6,7 +6,7 @@
 /*   By: aleger <aleger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/12 15:50:51 by aleger            #+#    #+#             */
-/*   Updated: 2022/02/12 16:28:07 by aleger           ###   ########.fr       */
+/*   Updated: 2022/02/14 16:54:16 by aleger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,14 +40,14 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
-char	*ft_verif_params(char *left_str, char *buf)
+char	*ft_verif_params(char *next_str, char *buf)
 {
-	if (!left_str || !buf)
+	if (!next_str || !buf)
 		return (NULL);
-	return (left_str);
+	return (next_str);
 }
 
-char	*ft_strjoin(char *left_str, char *buf)
+char	*ft_strjoin(char *next_str, char *buf)
 {
 	int		i;
 	int		j;
@@ -55,23 +55,23 @@ char	*ft_strjoin(char *left_str, char *buf)
 
 	i = 0;
 	j = 0;
-	if (!left_str)
+	if (!next_str)
 	{
-		left_str = malloc(sizeof(char));
-		left_str[0] = '\0';
+		next_str = malloc(sizeof(char));
+		next_str[0] = '\0';
 	}
-	ft_verif_params(left_str, buf);
-	str = malloc(sizeof(char) * (ft_strlen(left_str) + (ft_strlen(buf)) + 1));
+	ft_verif_params(next_str, buf);
+	str = malloc(sizeof(char) * (ft_strlen(next_str) + (ft_strlen(buf)) + 1));
 	if (!str)
 		return (NULL);
-	while (left_str[i])
+	while (next_str[i])
 	{
-		str[i] = left_str[i];
+		str[i] = next_str[i];
 		i++;
 	}
 	while (buf[j])
 		str[i++] = buf[j++];
 	str[i] = '\0';
-	free(left_str);
+	free(next_str);
 	return (str);
 }

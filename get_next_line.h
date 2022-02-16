@@ -6,7 +6,7 @@
 /*   By: aleger <aleger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/12 15:50:56 by aleger            #+#    #+#             */
-/*   Updated: 2022/02/12 16:29:43 by aleger           ###   ########.fr       */
+/*   Updated: 2022/02/14 16:54:47 by aleger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@
 
 int		ft_strlen(const char *s);
 char	*ft_strchr(const char *s, int c);
-char	*ft_verif_params(char *left_str, char *buf);
-char	*ft_strjoin(char *left_str, char *buf);
-char	*ft_new_left_str(char *left_str);
-char	*ft_get_line(char *left_str);
-char	*ft_read_left_str(int fd, char *left_str);
+char	*ft_verif_params(char *next_str, char *buf);
+char	*ft_strjoin(char *next_str, char *buf);
+char	*ft_new_next_str(char *next_str);
+char	*ft_get_line(char *next_str);
+char	*ft_read_next_str(int fd, char *next_str);
 char	*get_next_line(int fd);
 
 #endif
